@@ -7,9 +7,18 @@ use App\Form\TaskType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\Security;
 
 class TaskController extends AbstractController
 {
+
+    private $security;
+
+    public function __construct(Security $security)
+    {
+        $this->security = $security;
+    }
+
     /**
      * @Route("/tasks", name="task_list")
      */
@@ -23,7 +32,8 @@ class TaskController extends AbstractController
      */
     public function createAction(Request $request)
     {
-        $task = new Task();
+        $user = $this->security->getUser();
+        $task = (new Task())->setUser($user);
 
         $form = $this->createForm(TaskType::class, $task);
 
