@@ -31,6 +31,14 @@ class TaskController extends AbstractController
     }
 
     /**
+     * @Route("/tasks_done", name="task_done_list")
+     */
+    public function listDoneTasksAction()
+    {
+        return $this->render('task/list.html.twig', ['tasks' => $this->tRepo->findByIsDone(true)]);
+    }
+
+    /**
      * @Route("/tasks/create", name="task_create")
      */
     public function createAction(Request $request)
@@ -97,11 +105,22 @@ class TaskController extends AbstractController
      */
     public function deleteTaskAction(Task $task)
     {
-        $em = $this->getDoctrine()->getManager();
-        $em->remove($task);
-        $em->flush();
+        $user = $this->security->getUser();
 
-        $this->addFlash('success', 'La tâche a bien été supprimée.');
+        if($task->getUser() !== null && $task->getUser() == $user) {
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($task);
+            $em->flush();
+    
+            $this->addFlash('success', 'La tâche a bien été supprimée.');
+        } elseif($task->getUser() == null && in_array("ROLE_ADMIN", $user->getRoles())) {
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($task);
+            $em->flush();
+            $this->addFlash('success', 'La tâche a bien été supprimée.');
+        } else {
+            $this->addFlash("error", "Vous ne pouvez pas supprimer cette tache..");
+        }
 
         return $this->redirectToRoute('task_list');
     }
