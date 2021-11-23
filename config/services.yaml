@@ -21,5 +21,12 @@ services:
             - '../src/Kernel.php'
             - '../src/Tests/'
 
+    app.form.type.task:
+        class: App\Form\UserType
+        arguments: ["@security.authorization_checker"]
+        tags:
+            - { name: form.type }
+
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
