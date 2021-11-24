@@ -122,6 +122,6 @@ class TaskController extends AbstractController
             $this->addFlash("error", "Vous ne pouvez pas supprimer cette tache..");
         }
 
-        return $this->redirectToRoute('task_list');
+        return $this->redirectToRoute('homepage');
     }
 }
