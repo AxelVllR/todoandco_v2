@@ -8,6 +8,6 @@ class DefaultControllerTest extends TestCase
 {
     public function testSomething(): void
     {
-        $this->assertTrue(true);
+        $this->assertEquals(2, 1+1);
     }
 }

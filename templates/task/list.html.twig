@@ -6,15 +6,13 @@
     <div class="row">
         {% for task in tasks %}
         <div class="col-sm-4 col-lg-4 col-md-4">
-            <div class="thumbnail">
+            <div class="thumbnail" data-id="{{ task.id }}">
                 <div class="caption">
-                    <h4 class="pull-right">
-                        {% if task.isDone %}<span class="glyphicon glyphicon-ok"></span>{% else %}<span class="glyphicon glyphicon-remove"></span>{% endif %}
-                    </h4>
                     <h4><a href="{{ path('task_edit', {'id' : task.id }) }}">{{ task.title }}</a></h4>
+                    <p style="font-size:.8em">Crée par <span style="font-weight: bold;" class="task-author">{% if task.user != null %}{{ task.user == app.user ? 'VOUS' : task.user.username|upper }}{% else %}ANONYME{% endif %}</span>, le <span style="font-weight: bold;" class="task-creation">{{ task.createdAt|date('d/m/Y') }}</span></p>
                     <p>{{ task.content }}</p>
                 </div>
-                <div>
+                <div style="display: flex; justify-content: space-between">
                     <form action="{{ path('task_toggle', {'id' : task.id }) }}">
                         <button class="btn btn-success btn-sm pull-right">
                             {% if not task.isDone %}Marquer comme faite{% else %}Marquer non terminée{% endif %}

@@ -39,24 +39,24 @@
         <div class="container">
             <div class="row" style="margin-bottom:20px;">
                 {% if app.user and app.user.isAdmin %}
-                <a href="{{ path('user_create') }}" class="btn btn-primary">Créer un utilisateur</a>
+                <a href="{{ path('user_create') }}" class="btn btn-primary m-2">Créer un utilisateur</a>
                 {% elseif app.user == null %}
-                <a href="{{ path('app_register') }}" class="btn btn-primary">Inscription</a>
+                <a href="{{ path('app_register') }}" class="btn btn-primary m-2">Inscription</a>
                 {% endif %}
                 {% if app.user and app.user.isAdmin %}
-                    <a href="{{ path('user_list') }}" class="btn btn-warning">Gestion des utilisateurs</a>
+                    <a href="{{ path('user_list') }}" class="btn btn-warning m-2">Gestion des utilisateurs</a>
                 {% endif %}
 
                 {% if app.user %}
-                    <a href="{{ path('task_create') }}" class="btn btn-info">Créer une tâche</a>
+                    <a href="{{ path('task_create') }}" class="btn btn-info m-2">Créer une tâche</a>
                 {% endif %}
 
                 {% if app.user %}
-                <a href="{{ path('app_logout') }}" class="pull-right btn btn-danger">Se déconnecter</a>
+                <a href="{{ path('app_logout') }}" class="pull-right btn btn-danger m-2">Se déconnecter</a>
                 {% endif %}
 
                 {% if not app.user and 'login' != app.request.attributes.get('_route') %}
-                <a href="{{ path('app_login') }}" class="btn btn-success">Se connecter</a>
+                <a href="{{ path('app_login') }}" class="btn btn-success m-2">Se connecter</a>
                 {% endif %}
             </div>
 

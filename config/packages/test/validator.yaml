@@ -1,3 +1,7 @@
 framework:
+    test: true
     validation:
         not_compromised_password: false
+    form:
+        csrf_protection:
+            enabled: false
