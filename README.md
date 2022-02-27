@@ -24,7 +24,16 @@ Améliorer la qualité de l’application. La qualité est un concept qui englob
 Pour la visionner, une fois le repo cloné sur votre machine, ouvrez le fichier index.html inclu dans le dossier /documentation/file_system, ou alors, si vous utilisez Google Chrome, rendez vous dans le terminal, a la racine du projet, et lancez la commande `google-chrome documentation/file_system/index.html`.
 
   
-  
+## Performance
+
+Si vous souhaitez visionner les profilages que j'ai pu effectuer sur chacune des routes de l'app :
+
+  - [Connexion](https://blackfire.io/profiles/deb38f3d-76fc-4c93-b137-afa14f86e8b5/graph)
+  - [Création d'un utilisateur](https://blackfire.io/profiles/5ae475ae-f51e-4bea-b03e-b97626ef152e/graph) (ADMIN)
+  - [Liste des utilisateurs](https://blackfire.io/profiles/553a84cd-89ed-410f-b9a2-f74f390d1d85/graph) (ADMIN)
+  - [Création d'une tache](https://blackfire.io/profiles/c7a3ddc8-f815-4c6f-97d4-e04338454ec6/graph)
+  - [Liste des taches](https://blackfire.io/profiles/dc4ca6fa-4bf7-49e2-8e7e-b3d8d27a6edd/graph)
+  - [Edition d'une tache](https://blackfire.io/profiles/deb38f3d-76fc-4c93-b137-afa14f86e8b5/graph)
 
 ## Installer le Projet
 
