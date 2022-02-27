@@ -1,16 +1,6 @@
 Search.appendIndex(
     [
                 {
-            "fqsen": "\\App\\Controller\\CodeCoverageController",
-            "name": "CodeCoverageController",
-            "summary": "",
-            "url": "classes/App-Controller-CodeCoverageController.html"
-        },                {
-            "fqsen": "\\App\\Controller\\CodeCoverageController\u003A\u003AindexAction\u0028\u0029",
-            "name": "indexAction",
-            "summary": "",
-            "url": "classes/App-Controller-CodeCoverageController.html#method_indexAction"
-        },                {
             "fqsen": "\\App\\Controller\\DefaultController",
             "name": "DefaultController",
             "summary": "",
@@ -243,7 +233,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Entity\\User\u003A\u003AgetUserIdentifier\u0028\u0029",
             "name": "getUserIdentifier",
-            "summary": "A\u0020visual\u0020identifier\u0020that\u0020represents\u0020this\u0020user.",
+            "summary": "This\u0020is\u0020a\u0020multi\u002Dline\u0020DocComment.",
             "url": "classes/App-Entity-User.html#method_getUserIdentifier"
         },                {
             "fqsen": "\\App\\Entity\\User\u003A\u003AgetUsername\u0028\u0029",

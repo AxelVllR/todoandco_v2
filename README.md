@@ -2,7 +2,7 @@
   
 
 # Projet 8 - OpenClassrooms - ToDo & Co
-
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d6834e4f5c0a4d20ba0693ed986548c9)](https://www.codacy.com/gh/AxelVllR/todoandco_v2/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AxelVllR/todoandco_v2&amp;utm_campaign=Badge_Grade)
 ## _Parcours Développeur d'application - PHP / Symfony_
 
   
