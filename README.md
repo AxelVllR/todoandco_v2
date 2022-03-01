@@ -24,7 +24,7 @@ Améliorer la qualité de l’application. La qualité est un concept qui englob
 Pour la visionner, une fois le repo cloné sur votre machine, ouvrez le fichier index.html inclu dans le dossier /documentation/file_system, ou alors, si vous utilisez Google Chrome, rendez vous dans le terminal, a la racine du projet, et lancez la commande `google-chrome documentation/file_system/index.html`.
 
   
-## Performance
+## Performances (Blackfire)
 
 Si vous souhaitez visionner les profilages que j'ai pu effectuer sur chacune des routes de l'app :
 
